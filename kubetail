@@ -273,9 +273,9 @@ for context in ${!matching_pods[@]}; do
 			fi
 
 			if [ ${#pod_containers[@]} -eq 1 ]; then
-				display_name="${pod}"
+				display_name="${context}/${pod}"
 			else
-				display_name="${pod} ${container}"
+				display_name="${context}/${pod} ${container}"
 			fi
 			display_names_preview+=("${color_start}${display_name}${color_end}")
 
